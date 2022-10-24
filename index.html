@@ -40,7 +40,7 @@
     <!-- login -->
     <section class="col-5 text-white">
         <h1>Login</h1>
-        <form>
+        <form onsubmit="return false">
             <!-- email -->
             <div class="mb-3">
               <label for="loginEmail" class="form-label">Email address</label>
@@ -50,10 +50,10 @@
             <label for="loginPassword" class="form-label">Password</label>
             <input type="password" id="loginPassword" class="form-control" aria-describedby="passwordHelpBlock">
             <!-- submit -->
-            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            <button type="submit" class="btn btn-primary mt-3" id="loginButton">Submit</button>
         </form>
         
-
+        <div id="loginAlerts" class="my-4"></div>
     </section>
 
     <!-- bootstrap js -->
