@@ -40,5 +40,35 @@ function login(){
     }
 }
 
+let rolls = [0, 0];
+let scores = [0, 0];
+
+document.getElementById('userScore').innerHTML = scores[0];
+document.getElementById('aiScore').innerHTML = scores[1];
+
+
+function dices(){
+    rolls[0] = Math.floor(Math.random() * 6) + 1;
+    rolls[1] = Math.floor(Math.random() * 6) + 1;
+    document.getElementById('userRoll').innerHTML = `your roll:${rolls[0]}`;
+    document.getElementById('aiRoll').innerHTML = `AI roll:${rolls[1]}`;
+    if(rolls[0]>rolls[1]){
+        scores[0] = scores [0] + 1;
+        document.getElementById('point').innerHTML = 'you got the point!';
+    }
+    else if(rolls[0] < rolls[1]){
+        scores[1] = scores [1] + 1;
+        document.getElementById('point').innerHTML = 'try again, you will be luckier!';
+    }
+    else if(rolls[0] == rolls[1]){
+        document.getElementById('point').innerHTML = 'tie, It could have been worse';
+
+    }
+    console.log(scores);
+    document.getElementById('userScore').innerHTML = scores[0];
+    document.getElementById('aiScore').innerHTML = scores[1];
+}
+
+document.getElementById('roll').addEventListener('click', dices);
     
 

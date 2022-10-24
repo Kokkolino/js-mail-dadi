@@ -12,7 +12,7 @@
 </head>
 <body class="bg-dark bg-gradient w-100 h-100 row justify-content-around">
     <!-- Sign In -->
-    <section class="col-5 text-white">
+    <section class="col-5 text-white my-5">
         <h2>Sign in</h2>
         <form onsubmit="return false">
             <!-- email -->
@@ -38,7 +38,7 @@
         <div id="signInAlerts" class="my-4"></div>
     </section>
     <!-- login -->
-    <section class="col-5 text-white">
+    <section class="col-5 text-white my-5">
         <h1>Login</h1>
         <form onsubmit="return false">
             <!-- email -->
@@ -54,6 +54,30 @@
         </form>
         
         <div id="loginAlerts" class="my-4"></div>
+    </section>
+    <!-- game sec -->
+    <section class="col-10 text-white my-5 row justify-content-around">
+        <h4 class="text-center">Does our moderator banned you and you can't no more log in? are you getting bored? </h4>
+        <h1 class="text-center">Have fun playing with dices vs the AI!</h1>
+        <div class="text-center my-5">
+            <button type="button" class="btn btn-outline-light" id="roll">Roll dices!</button>
+            <button type="button" class="btn btn-outline-danger" id="reset">Restart!</button>
+        </div>
+        <!-- scoreboard -->
+        <section class="col-4">
+            <div>
+                Your score: <span id="userScore"></span>
+            </div>
+            <div>
+                AI score: <span id="aiScore"></span>
+            </div>
+        </section>
+        <!-- numbers -->
+        <section class="col-4">
+            <div id="userRoll"></div>
+            <div id="aiRoll"></div>
+            <div id="point"></div>
+        </section>
     </section>
 
     <!-- bootstrap js -->
