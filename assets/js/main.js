@@ -69,6 +69,19 @@ function dices(){
     document.getElementById('aiScore').innerHTML = scores[1];
 }
 
+function reset(){
+    scores[0] = 0;
+    scores[1] = 0;
+    
+    document.getElementById('userScore').innerHTML = scores[0];
+    document.getElementById('aiScore').innerHTML = scores[1];
+    document.getElementById('userRoll').innerHTML = "";
+    document.getElementById('aiRoll').innerHTML = "";
+    document.getElementById('point').innerHTML = "";
+
+}
+document.getElementById('reset').addEventListener('click', reset);
+
 document.getElementById('roll').addEventListener('click', dices);
     
 
