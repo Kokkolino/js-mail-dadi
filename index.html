@@ -10,10 +10,52 @@
     <!-- my css -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    
+<body class="bg-dark bg-gradient w-100 h-100 row justify-content-around">
+    <!-- Sign In -->
+    <section class="col-5 text-white">
+        <h2>Sign in</h2>
+        <form onsubmit="return false">
+            <!-- email -->
+            <div class="mb-3">
+              <label for="signInEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="signInEmail" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <!-- password -->
+            <label for="signInPassword" class="form-label">Password</label>
+            <input type="password" id="signInPassword" class="form-control" aria-describedby="passwordHelpBlock">
+            <div id="passwordHelpBlock" class="form-text">
+              Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+            </div>       
+            <!-- checkbox      -->
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="signInCheck">
+              <label class="form-check-label" for="exampleCheck1">Checking this you will agree with our <a href="">terms</a></label>
+            </div>
+            <!-- submit -->
+            <button type="submit" class="btn btn-primary" id="signInButton">Submit</button>
+        </form>
+        <div id="signInAlerts" class="my-4"></div>
+    </section>
+    <!-- login -->
+    <section class="col-5 text-white">
+        <h1>Login</h1>
+        <form>
+            <!-- email -->
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+            </div>
+            <!-- password -->
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" id="loginPassword" class="form-control" aria-describedby="passwordHelpBlock">
+            <!-- submit -->
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+        
 
-    
+    </section>
+
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- my js -->
